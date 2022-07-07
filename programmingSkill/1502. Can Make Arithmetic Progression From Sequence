@@ -1,0 +1,13 @@
+class Solution {
+    public boolean canMakeArithmeticProgression(int[] a) {
+        if(a.length <2)
+            return true;
+        Arrays.sort(a);
+        for(int i=1;i<a.length-1;i++){
+            if(Math.abs(a[i]-a[i-1])!=Math.abs(a[i+1]-a[i])){
+                return false;
+            }
+        }
+        return true;
+    }
+}
